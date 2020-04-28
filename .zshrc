@@ -5,10 +5,10 @@
 export ZSH="/Users/houri/.oh-my-zsh"
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 
+
+
 HISTORY_IGNORE="(source /Users*|cd|pwd|exit|cd ..|ls)"
-setopt HIST_SAVE_NO_DUPS
 setopt HIST_FIND_NO_DUPS
-setopt HIST_IGNORE_ALL_DUPS
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -215,6 +215,6 @@ alias ls="colorls --group-directories-first"
 # HSTR configuration - add this to ~/.zshrc
 alias hh=hstr                    # hh to be alias for hstr
 setopt histignorespace           # skip cmds w/ leading space from history
-export HSTR_CONFIG=hicolor       # get more colors
+export HSTR_CONFIG=hicolor,raw-history-view     # get more colors
 bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode check doc)
-
+export HISTFILE=~/.dotfiles/.zsh_history
